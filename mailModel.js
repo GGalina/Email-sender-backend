@@ -9,6 +9,7 @@ const emailSchema = Joi.object({
     reason: Joi.string().min(2).required(),
 });
 
+
 module.exports = {
   emailSchema
 };
