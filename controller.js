@@ -5,13 +5,13 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 
 const sendEmail = async (req, res, next) => {
     try {
-        const { name, email, phone, reason } = req.body;
+        const { teacher, name, email, phone, reason } = req.body;
 
         const contact = {
             to: SENDGRID_TO,
             from: SENDGRID_FROM,
             subject: "This email generated from LearnLingo booking form",
-            text: `Name: ${name}\nEmail: ${email}\n Phone: ${phone}\n Reason to learn: ${reason} `,
+            text: `Teacher: ${teacher}\n Name: ${name}\n Email: ${email}\n Phone: ${phone}\n Reason to learn: ${reason} `,
         }
 
         await sgMail.send(contact);

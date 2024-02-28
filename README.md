@@ -57,6 +57,7 @@ The server will be running at http://localhost:3000 by default.
 
 ```json
 {
+  "teacher": "Anna Levis",
   "name": "John Smith",
   "email": "smith@example.com",
   "phone": "+380654567890",
